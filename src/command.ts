@@ -77,6 +77,7 @@ export class Command {
     if (data?.application_commands?.[0]) {
       return data.application_commands[0];
     }
+    console.log("name command", name)
     throw new Error(`Failed to get application_commands for command ${name}`);
   }
   private safeFetch(input: RequestInfo | URL, init?: RequestInit | undefined) {
